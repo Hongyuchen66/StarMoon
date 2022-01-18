@@ -25,38 +25,39 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- 聯絡我們css -->
   <link rel="stylesheet" href="./css/contact.css">
+
 </head>
 
 <body>
   <!-- nav -->
-  <div class="navbar">
+  <div class="navbar collapse navbar-collapse">
     <div class="logo"></div>
-    <ul>
-      <li><a href="#introduce">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a href="#introduce">
           <h3>TOP</h3>
         </a></li>
-      <li><a href="#">
+      <li class="nav-item"><a href="#">
           <h3>房型介紹</h3>
         </a></li>
-      <li><a href="#">
+      <li class="nav-item"><a href="#">
           <h3>園區特色</h3>
         </a></li>
-      <li><a href="#">
+      <li class="nav-item"><a href="#news">
           <h3>最新消息</h3>
         </a></li>
-      <li><a href="#evaluation">
+      <li class="nav-item"><a href="#evaluation">
           <h3>評價</h3>
         </a></li>
-      <li><a href="location.html" target="_blank">
+      <li class="nav-item"><a href="location.html" target="_blank">
           <h3>交通資訊</h3>
         </a></li>
-      <li><a class="nav-link"
+      <li class="nav-item"><a class="nav-link"
           href="https://booking.owlting.com/smbnb?lang=zh_TW&start=2022-01-09&end=2022-01-10&adult=1&child=0&infant=0"
           target="_blank">
           <h3>線上訂房</h3>
         </a>
       </li>
-      <li><a class="btn popup-btn" href="#letmeopen">
+      <li class="nav-item"><a class="btn popup-btn" href="#letmeopen">
           <h3>聯絡我們</h3>
         </a></li>
     </ul>
@@ -278,7 +279,7 @@
     </section>
 
     <!-- 最新消息 -->
-    <section class="news">
+    <section class="news" id="news">
       <!-- 星月文旅 https://www.facebook.com/smbnb-->
       <div class="swiper news-contain">
         <div class="swiper-wrapper">
@@ -310,7 +311,7 @@
     </section>
 
     <!-- 評價專區 -->
-    <section class="evaluation">
+    <section class="evaluation" id="evaluation">
       <div class="swiper-evaluation">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper evaluation-wrapper">
