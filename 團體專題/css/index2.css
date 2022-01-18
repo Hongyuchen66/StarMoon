@@ -15,9 +15,7 @@ body{
     padding:30px 10px;
     box-shadow:4px 4px 10px #cccccc;/*陰影*/
     position: fixed;/*定位用*/
-    z-index:1;最上層
-
-    
+    z-index:1;    
 }
 
 .logo{
@@ -1786,7 +1784,7 @@ html,body {
   background-image: url('../img/index_img_04.jpg');
   height: 70vh;
   background-size:cover;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
 .news-contain {
