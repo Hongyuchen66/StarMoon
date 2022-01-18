@@ -96,11 +96,11 @@
         </div>
 
         <div class="right">
+            @foreach ($rooms as $room)
             <div class="contain-text">
-                <h2 class="title">DELUEX TWIN BEDS</h2>
+                <h2 class="title">{{$room->subtitle}}</h2>
                 <h2 class="title">ROOM</h2>
 
-                @foreach ($rooms as $room)
 
                 <span class="subtitle">
                     <span class="area">{{$room->name}}</span>
@@ -109,8 +109,8 @@
                 </span>
                 <span class="memo" name="room_facility" id="room_facility" cols="50"
                     rows="8">{!!$room->room_facility!!}</span>
-                @endforeach
             </div>
+            @endforeach
         </div>
     </section>
     <footer class="footer">
@@ -120,14 +120,14 @@
         </div>
     </footer>
 </div>
-    @endsection
+@endsection
 
-    @section('js')
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+@section('js')
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Swiper  -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
+<!-- Swiper  -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 4,
@@ -148,5 +148,5 @@
       swiper: swiper,
     },
   });
-    </script>
-    @endsection
+</script>
+@endsection
