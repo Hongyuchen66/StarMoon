@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ToolboxController;
@@ -21,12 +22,20 @@ use App\Http\Controllers\RoomTypeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // 前台
-// Route::get('/', [FrontController::class, 'index'])->name('index');
+Route::get('/', [FrontController::class, 'index'])->name('index');
+// 聯絡我們
+Route::post('/contact', [FrontController::class, 'contact'])->name('contact');
+// 交通資訊
+Route::get('/location', [FrontController::class, 'location'])->name('location');
+// 房型介紹
+Route::get('/rooms', [FrontController::class, 'roomList'])->name('rooms.list');
+
+
 
 Auth::routes();
 
@@ -45,8 +54,6 @@ Route::prefix('admin')->middleware(['auth'])->group(function (){
     Route::resource('/feedbacks', FeedbackController::class);
     // 輪播圖片和slogan管理
     Route::resource('/carousels', CarouselController::class);
-    Route::post('/contact', [CarouselController::class, 'contact'])->name('carousels.contact');
-
     // 園區特色管理
     Route::resource('/features', FeatureController::class);
     Route::delete('/feature-image',[FeatureController::class,'imageDelete'])->name('feature.image-delete');

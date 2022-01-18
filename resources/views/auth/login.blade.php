@@ -10,7 +10,6 @@
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     {{-- <div class="col-lg-6 d-none d-lg-block bg-login-image"></div> --}}
-                    {{-- <img class="col-lg-6 d-none d-lg-block" src="{{ asset('/img/tiger.png') }}" alt=""> --}}
                     <img class="col-lg-6 d-none d-lg-block" src="{{ asset('/img/white.jpg') }}" alt="">
                     <div class="col-lg-6">
                         <div class="p-5">
