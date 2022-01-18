@@ -21,7 +21,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/index2.css">
-
+  <!-- Swiper css -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -193,7 +194,7 @@
 
       <div class="introduce-bottom-photo photo"></div>
 
-      
+
     </section>
 
 
@@ -270,37 +271,87 @@
 
     <!-- 最新消息 -->
     <section class="news">
-
+      <!-- 星月文旅 https://www.facebook.com/smbnb-->
+      <div class="swiper news-contain">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><iframe
+              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsmbnb%2Fposts%2F1026083784635535&show_text=true&width=500"
+              width="500" height="639" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+          <div class="swiper-slide"><iframe
+              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsmbnb%2Fposts%2F1020317485212165&show_text=true&width=500"
+              width="500" height="515" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+          <div class="swiper-slide"><iframe
+              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fsmbnb%2Fvideos%2F647212469752050%2F&show_text=true&width=560&t=0"
+              width="560" height="429" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+              allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              allowFullScreen="true"></iframe></div>
+          <div class="swiper-slide"><iframe
+              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsmbnb%2Fposts%2F970210260222888&show_text=true&width=500"
+              width="500" height="660" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>      
     </section>
 
     <!-- 評價專區 -->
-    <section class="">
-
+    <section class="evaluation">
+      <div class="swiper-evaluation">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper evaluation-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <span name="" id="" cols="100" rows="13">
+              品質一級棒
+              CP值超高，老闆人很好，服務周到，熱情，狂推....
+            </span>
+          </div>
+          <div class="swiper-slide">
+            <span name="" id="" cols="100" rows="13">
+              因為是在小小的山坡上
+              可以看到美麗的夜景，
+              抬頭也可以看到星空，
+            </span>
+          </div>
+          <div class="swiper-slide">
+            <span name="" id="" cols="100" rows="13">
+              文旅房間舒適有質感❤️ 景觀咖啡廳，服務人員超親切，烤肉吃到飽，好好味
+            </span>
+          </div>
+          <div class="swiper-slide">
+            <span name="" id="" cols="100" rows="13">
+              服務人員態度親切，
+              因為隔天台晚起，
+              而早餐在附近的早餐店（亮宅）
+              早餐店又是網美店🤣
+            </span>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
     </section>
 
-
-
-
-
-
-
-
-
-
   </div>
-
-
-
-
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/jquerypp.custom.js"></script>
   <script src="js/jquery.bookblock.js"></script>
-
-
-
-
+  <!-- swiper JS  -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <script>
     var Page = (function () {
@@ -384,6 +435,84 @@
   </script>
   <script>
     Page.init();
+  </script>
+
+  <script>
+    // 最新消息
+    var swiper2 = new Swiper(".news-contain", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    //評價專區  
+    const swiper = new Swiper('.swiper-evaluation', {
+      // Optional parameters => vertical/horizontal
+      // width: 700,
+      // height: 500,
+      direction: 'horizontal',
+      loop: true,
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      watchSlidesProgress: true,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      loopedSlides: 5,
+      autoplay: {
+        delay: 10000, //10秒切換一次
+        disableOnInteraction: false, //避免手動滑動輪播圖後，自動播放失效
+      },
+      on: {
+        progress: function (progress) {
+          for (let i = 0;i < this.slides.length;i++) {
+            var slide = this.slides.eq(i);
+            var slideProgress = this.slides[i].progress;
+            let modify = 1;
+            if (Math.abs(slideProgress) > 1) {
+              modify = (Math.abs(slideProgress) - 1) * 0.5 + 1;
+            }
+            let translate = slideProgress * modify * 130 + 'px';
+            let scale = 1 - Math.abs(slideProgress) / 5;
+            let zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+            slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+            slide.css('zIndex', zIndex);
+            slide.css('opacity', 1);
+            if (Math.abs(slideProgress) > 3) {
+              slide.css('opacity', 0);
+            }
+          }
+        },
+        setTransition: function (transition) {
+          for (let i = 0;i < this.slides.length;i++) {
+            var slide = this.slides.eq(i)
+            slide.transition(transition);
+          }
+        }
+      }
+    });
+
   </script>
 
 </body>
