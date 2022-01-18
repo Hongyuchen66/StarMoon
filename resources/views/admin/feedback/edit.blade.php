@@ -23,7 +23,7 @@
                 <h2 class="card-header pt-3 pb-2">評價 - 編輯</h2>
 
                 <div class="card-body">
-                    <form method="POST" action="{{route('feedbacks.edit',['feedback'=>$feedback->id])}}">
+                    <form method="POST" action="{{route('feedbacks.update',['feedback'=>$feedback->id])}}">
                         @csrf
                         @method('PATCH')
                         <div class="form-group row py-2">

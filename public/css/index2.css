@@ -1,97 +1,109 @@
+body {
+  width: 100vw;
+  max-width: 1920px;
+  /*將整體寬度限制在1920px*/
+  margin: 0 auto;
+  /*置中*/
+  box-sizing: border-box;
+  font-family: Microsoft JhengHei;
+  /*字型設置*/
 
-body{
-    width: 100vw;
-    max-width: 1920px;/*將整體寬度限制在1920px*/
-    margin: 0 auto;/*置中*/
-    box-sizing: border-box;
-    font-family:Microsoft JhengHei;/*字型設置*/
-    
 }
 
-.navbar{
-    background-color:#E09E50;
-    width: 140px;
-    height: 100vh;
-    padding:30px 10px;
-    box-shadow:4px 4px 10px #cccccc;/*陰影*/
-    position: fixed;/*定位用*/
-    z-index:1;/*最上層*/
-
-    
+.navbar {
+  background-color: #E09E50;
+  width: 140px;
+  height: 100vh;
+  padding: 30px 10px;
+  box-shadow: 4px 4px 10px #cccccc;
+  /*陰影*/
+  position: fixed;
+  /*定位用*/
+  z-index: 1;
 }
 
-.logo{
+.logo {
   background-image: url('https://www.starmoonland.com.tw/_images/all/logo.svg');
   width: 80px;
   height: 80px;
-  margin:30px auto;
+  margin: 30px auto;
 }
 
-.navbar:hover{
-  width: 180px; /*將區塊顯示*/
-  transition-duration:0.8s ;
+.navbar:hover {
+  width: 180px;
+  /*將區塊顯示*/
+  transition-duration: 0.8s;
   transition-timing-function: ease-in-out;
 }
 
-.navbar:hover li{
-  opacity:1; /*將區塊顯示*/
-  
+.navbar:hover li {
+  opacity: 1;
+  /*將區塊顯示*/
+
 }
 
-ul{
+ul {
   padding: 0px;
-  margin-top: 50px;/*和LOGO距離*/
+  margin-top: 50px;
+  /*和LOGO距離*/
 }
 
-li{
-  opacity:0;
-  text-align:center;/*置中*/
-  margin-bottom: 30px;/*間距拉大*/
-  transition: .5s;/*動畫延遲*/
-  list-style-type: none;/*把點點去掉*/
+li {
+  opacity: 0;
+  text-align: center;
+  /*置中*/
+  margin-bottom: 30px;
+  /*間距拉大*/
+  transition: .5s;
+  /*動畫延遲*/
+  list-style-type: none;
+  /*把點點去掉*/
 }
 
-a{
-  color:rgb(65, 62, 62);/*字改顏色*/
-  text-decoration: none;/*去掉藍線*/
+a {
+  color: rgb(65, 62, 62);
+  /*字改顏色*/
+  text-decoration: none;
+  /*去掉藍線*/
 }
 
-.content{
+.content {
   float: right;
   max-width: 1800px;
   width: 94vw;
 }
 
-.photo{
+.photo {
   width: 100%;
   background-size: 100%;
-  background-repeat:no-repeat;
-  background-attachment: fixed;/*讓圖片固定在後面可以看到的視窗滾動*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*讓圖片固定在後面可以看到的視窗滾動*/
 }
 
-.info{
+.info {
   width: 100%;
   padding: 20px 0;
   background-image: url('/img/bk.jpg');
-  text-align:center;
+  text-align: center;
 }
 
-.introduce-top-photo{
+.introduce-top-photo {
   background-image: url('/img/index_img_01.jpg');
   height: 44.5vw;
 }
 
-.introduce-top-info{
+.introduce-top-info {
   margin: 0;
 }
 
-.introduce-middle-photo{
+.introduce-middle-photo {
   background-image: url('/img/index_img_02.png');
   height: 40vw;
-  background-position:center;
+  background-position: center;
 }
 
-.introduce-bottom-photo{
+.introduce-bottom-photo {
   background-image: url('/img/index_img_05.jpg');
   height: 40vw;
 }
@@ -104,71 +116,71 @@ a{
 
 }
 
-.bb-custom-wrapper{
-width: 600px;
+.bb-custom-wrapper {
+  width: 600px;
 }
 
-.bb-bookblock{
-width: 600px;
-height: 400px;
+.bb-bookblock {
+  width: 600px;
+  height: 400px;
 }
 
-.room{
+.room {
   background-color: rgb(250, 219, 182);
-  text-align:center;
+  text-align: center;
   padding: 80px;
 }
 
-.wrapper-photo{
+.wrapper-photo {
   overflow: hidden;
 }
 
 .wrapper img:hover {
   transform: scale(1.1, 1.1);
-  transition-duration:0.5s ;
+  transition-duration: 0.5s;
 }
 
 
-.feature-top-photo{
+.feature-top-photo {
   background-image: url('/img/index_img_06.jpg');
   height: 26vw;
-  background-size:cover;
+  background-size: cover;
 }
 
-.feature-photo01{
+.feature-photo01 {
   background-image: url('/img/index_img_07.jpg');
   height: 26vw;
-  background-size:cover;
+  background-size: cover;
 }
 
-.feature-photo02{
+.feature-photo02 {
   background-image: url('/img/index_img_08.jpg');
   height: 26vw;
-  background-size:cover;
+  background-size: cover;
 }
 
-.feature-photo03{
+.feature-photo03 {
   background-image: url('/img/index_img_09.png');
   height: 26vw;
-  background-size:cover;
+  background-size: cover;
 }
 
-.feature-photo04{
+.feature-photo04 {
   background-image: url('/img/index_img_10.jpg');
   height: 26vw;
 }
 
-.feature-info{
+.feature-info {
   background-color: rgb(250, 219, 182);
   width: 100%;
   padding: 20px 0;
-  text-align:center;
+  text-align: center;
 }
 
 
 /* 以下是星空動態用的區域 */
 
-html,body {
+html, body {
 
   overflow-x: hidden;
   align-items: center;
@@ -179,16 +191,12 @@ html,body {
   --moonlight-2: rgba(44, 116, 140, 0.2);
   --moonlight-3: rgba(67, 157, 174, 0.2);
   --moonlight-4: rgba(82, 176, 190, 0.2);
-  --hill-right-color: linear-gradient(
-    180deg,
-    rgba(1, 107, 131, 1) 0%,
-    rgba(22, 80, 112, 1) 34%
-  );
-  --hill-left-color: linear-gradient(
-    180deg,
-    rgba(1, 107, 131, 1) 0%,
-    rgba(16, 90, 124, 1) 34%
-  );
+  --hill-right-color: linear-gradient(180deg,
+      rgba(1, 107, 131, 1) 0%,
+      rgba(22, 80, 112, 1) 34%);
+  --hill-left-color: linear-gradient(180deg,
+      rgba(1, 107, 131, 1) 0%,
+      rgba(16, 90, 124, 1) 34%);
   --middle-hill-color: #154465;
   --layer-4: #10768e;
   --layer-2: #125a79;
@@ -244,18 +252,21 @@ html,body {
   position: relative;
   background: var(--moon-color-2);
 }
+
 .shadow.shadow-1 {
   width: 12px;
   height: 12px;
   left: 26px;
   top: 12px;
 }
+
 .shadow.shadow-2 {
   width: 16px;
   height: 16px;
   left: 10px;
   top: 10px;
 }
+
 .shadow.shadow-3 {
   width: 8px;
   height: 8px;
@@ -270,21 +281,25 @@ html,body {
   position: relative;
   z-index: 2;
 }
+
 .moonlight.moonlight-4 {
   background: var(--moonlight-4);
   width: 200px;
   height: 200px;
 }
+
 .moonlight.moonlight-3 {
   background: var(--moonlight-3);
   width: 360px;
   height: 360px;
 }
+
 .moonlight.moonlight-2 {
   background: var(--moonlight-2);
   width: 480px;
   height: 480px;
 }
+
 .moonlight.moonlight-1 {
   background: var(--moonlight-1);
   width: 620px;
@@ -369,37 +384,42 @@ html,body {
 
 .moonlight {
   -webkit-animation-name: pulse;
-          animation-name: pulse;
+  animation-name: pulse;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
   -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  animation-direction: alternate;
   -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-duration: 2s;
 }
+
 .moonlight.moonlight-1 {
   -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
+
 .moonlight.moonlight-2 {
   -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
+
 .moonlight.moonlight-3 {
   -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
+
 .moonlight.moonlight-4 {
   -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 @-webkit-keyframes pulse {
   0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(1.01);
   }
@@ -409,10 +429,12 @@ html,body {
   0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(1.01);
   }
 }
+
 .stars {
   position: absolute;
   z-index: 1;
@@ -431,59 +453,73 @@ html,body {
   width: 2px;
   height: 2px;
 }
+
 .small-stars .star:nth-child(2n) {
   opacity: 0;
   -webkit-animation: star-blink 2.4s linear infinite alternate;
-          animation: star-blink 2.4s linear infinite alternate;
+  animation: star-blink 2.4s linear infinite alternate;
 }
+
 .small-stars .star:nth-child(1) {
   left: 210px;
   top: 50px;
 }
+
 .small-stars .star:nth-child(2) {
   left: 400px;
   top: 40px;
 }
+
 .small-stars .star:nth-child(3) {
   left: 720px;
   top: 120px;
 }
+
 .small-stars .star:nth-child(4) {
   left: 140px;
   top: 450px;
 }
+
 .small-stars .star:nth-child(5) {
   left: 500px;
   top: 300px;
 }
+
 .small-stars .star:nth-child(6) {
   left: 150px;
   top: 80px;
 }
+
 .small-stars .star:nth-child(7) {
   left: 200px;
   top: 360px;
 }
+
 .small-stars .star:nth-child(8) {
   left: 70px;
   top: 370px;
 }
+
 .small-stars .star:nth-child(9) {
   left: 300px;
   top: 340px;
 }
+
 .small-stars .star:nth-child(10) {
   left: 130px;
   top: 500px;
 }
+
 .small-stars .star:nth-child(11) {
   left: 230px;
   top: 430px;
 }
+
 .small-stars .star:nth-child(12) {
   left: 600px;
   top: 380px;
 }
+
 @-webkit-keyframes star-blink {
   50% {
     width: 3px;
@@ -491,6 +527,7 @@ html,body {
     opacity: 1;
   }
 }
+
 @keyframes star-blink {
   50% {
     width: 3px;
@@ -505,78 +542,91 @@ html,body {
   height: 3px;
   opacity: 0;
   -webkit-animation: star-blink 2.4s ease-in infinite alternate;
-          animation: star-blink 2.4s ease-in infinite alternate;
+  animation: star-blink 2.4s ease-in infinite alternate;
 }
+
 .medium-stars .star:nth-child(1) {
   left: 300px;
   top: 50px;
 }
+
 .medium-stars .star:nth-child(2) {
   left: 600px;
   top: 40px;
   -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
+
 .medium-stars .star:nth-child(3) {
   left: 720px;
   top: 300px;
   -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
+
 .medium-stars .star:nth-child(4) {
   left: 500px;
   top: 300px;
   -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
+
 .medium-stars .star:nth-child(5) {
   left: 300px;
   top: 150px;
   -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
+
 .medium-stars .star:nth-child(6) {
   left: 740px;
   top: 450px;
   -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
 }
+
 .medium-stars .star:nth-child(7) {
   left: 240px;
   top: 240px;
   -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
+  animation-delay: 2.4s;
 }
+
 .medium-stars .star:nth-child(8) {
   left: 30px;
   top: 280px;
   -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
+
 .medium-stars .star:nth-child(9) {
   left: 560px;
   top: 400px;
   -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
+  animation-delay: 2.2s;
 }
+
 .medium-stars .star:nth-child(10) {
   left: 150px;
   top: 10px;
   -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
 }
+
 .medium-stars .star:nth-child(11) {
   left: 90px;
   top: 200px;
   -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
+
 .medium-stars .star:nth-child(12) {
   left: 20px;
   top: 80px;
   -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
+
 @keyframes star-blink {
   50% {
     width: 4px;
@@ -596,10 +646,12 @@ html,body {
 .cabin-wrapper .wall {
   background: var(--cabin-color);
 }
+
 .cabin-wrapper .roof {
   width: 120px;
   height: 24px;
 }
+
 .cabin-wrapper .roof:before {
   content: "";
   position: absolute;
@@ -607,6 +659,7 @@ html,body {
   border-bottom: 24px solid var(--cabin-color);
   left: -12px;
 }
+
 .cabin-wrapper .roof:after {
   content: "";
   position: absolute;
@@ -630,13 +683,15 @@ html,body {
   height: 10px;
   background: var(--light-color);
   -webkit-animation: window-light 1s linear infinite;
-          animation: window-light 1s linear infinite;
+  animation: window-light 1s linear infinite;
 }
+
 @-webkit-keyframes window-light {
   50% {
     box-shadow: 0px 2px 7px 0px rgba(245, 223, 79, 0.7);
   }
 }
+
 @keyframes window-light {
   50% {
     box-shadow: 0px 2px 7px 0px rgba(245, 223, 79, 0.7);
@@ -654,6 +709,7 @@ html,body {
   width: 40px;
   height: 80px;
 }
+
 .windmill-wall:after {
   content: "";
   position: absolute;
@@ -668,6 +724,7 @@ html,body {
   width: 40px;
   height: 20px;
 }
+
 .windmill-roof .roof-below:before {
   content: "";
   position: absolute;
@@ -675,6 +732,7 @@ html,body {
   border-bottom: 20px solid var(--cabin-color);
   left: -10px;
 }
+
 .windmill-roof .roof-below:after {
   content: "";
   position: absolute;
@@ -699,21 +757,24 @@ html,body {
   background: var(--light-color);
   box-shadow: 0px 0px 2px 1px rgba(245, 223, 79, 0.4);
   -webkit-animation: light-pulse 2s linear infinite alternate;
-          animation: light-pulse 2s linear infinite alternate;
+  animation: light-pulse 2s linear infinite alternate;
 }
+
 .light:nth-child(2) {
   width: 4px;
   height: 4px;
   top: 36px;
   left: 42px;
   -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
+
 @-webkit-keyframes light-pulse {
   50% {
     box-shadow: 0px 0px 2px 10px rgba(245, 223, 79, 0.4);
   }
 }
+
 @keyframes light-pulse {
   50% {
     box-shadow: 0px 0px 2px 10px rgba(245, 223, 79, 0.4);
@@ -725,6 +786,7 @@ html,body {
   height: 3px;
   left: -8px;
 }
+
 @keyframes light-pulse {
   50% {
     box-shadow: 0px 0px 2px 4px rgba(245, 223, 79, 0.4);
@@ -740,7 +802,7 @@ html,body {
 .wings {
   position: absolute;
   -webkit-animation: spin 6s linear infinite;
-          animation: spin 6s linear infinite;
+  animation: spin 6s linear infinite;
   transform-origin: center;
   width: 140px;
   z-index: 2;
@@ -750,6 +812,7 @@ html,body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(-360deg);
   }
@@ -759,16 +822,19 @@ html,body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(-360deg);
   }
 }
+
 .wing {
   position: absolute;
   width: 140px;
   height: 3px;
   background: var(--cabin-color);
 }
+
 .wing:first-child {
   transform: rotate(90deg);
 }
@@ -783,14 +849,17 @@ html,body {
   width: 60px;
   transform: rotate(90deg);
 }
+
 .wing-part:first-child {
   top: -50px;
   left: 40px;
 }
+
 .wing-part:nth-child(2) {
   top: 40px;
   left: 40px;
 }
+
 .wing-part .line {
   position: relative;
   width: 170px;
@@ -807,29 +876,37 @@ html,body {
   width: 140px;
   height: 140px;
 }
+
 .shadow-wrapper .cabin-wrapper .wall {
   height: 16px;
 }
+
 .shadow-wrapper .cabin-wrapper {
   transform: translateY(44px) translateX(-10px) rotateX(-180deg) skew(24deg);
   background: var(--cabin-color-shadow);
 }
+
 .shadow-wrapper .wings {
   -webkit-animation: shadow-spin 6s linear infinite;
-          animation: shadow-spin 6s linear infinite;
+  animation: shadow-spin 6s linear infinite;
 }
+
 .shadow-wrapper .windmill-wrapper {
   transform: translateY(166px) translateX(-32px) rotateX(-180deg) skew(20deg);
 }
+
 .shadow-wrapper .windmill-wrapper .windmill-wall {
   height: 50px;
 }
+
 .shadow-wrapper .roof-upper {
   border-bottom: 10px solid var(--cabin-color-shadow);
 }
+
 .shadow-wrapper .wing-part {
   border: 3px solid var(--cabin-color-shadow);
 }
+
 .shadow-wrapper .roof-below,
 .shadow-wrapper .wing,
 .shadow-wrapper .line,
@@ -838,13 +915,16 @@ html,body {
 .shadow-wrapper .cabin-wrapper .roof {
   background: var(--cabin-color-shadow);
 }
+
 .shadow-wrapper .windmill-wall:after {
   border-bottom: 20px solid var(--cabin-color-shadow);
 }
+
 .shadow-wrapper .cabin-wrapper .roof:after,
 .shadow-wrapper .cabin-wrapper .roof:before {
   border-bottom: 20px solid var(--cabin-color-shadow);
 }
+
 .shadow-wrapper .roof-below:before,
 .shadow-wrapper .roof-below:after {
   border-bottom: 20px solid var(--cabin-color-shadow);
@@ -854,6 +934,7 @@ html,body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(-360deg);
   }
@@ -863,10 +944,12 @@ html,body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(-360deg);
   }
 }
+
 .tree {
   position: absolute;
   top: 404px;
@@ -879,6 +962,7 @@ html,body {
   height: 44px;
   background: var(--cabin-color);
 }
+
 .tree .trunk:before {
   content: "";
   position: absolute;
@@ -889,6 +973,7 @@ html,body {
   left: -4px;
   bottom: 10px;
 }
+
 .tree .trunk:after {
   content: "";
   position: absolute;
@@ -903,8 +988,9 @@ html,body {
   position: relative;
   background: var(--cabin-color);
   -webkit-animation: tree-wind 1.4s linear infinite;
-          animation: tree-wind 1.4s linear infinite;
+  animation: tree-wind 1.4s linear infinite;
 }
+
 .tree-leaves .a {
   position: absolute;
   background: var(--cabin-color);
@@ -912,16 +998,19 @@ html,body {
   height: 10px;
   border-radius: 50%;
 }
+
 .tree-leaves.upper {
   width: 30px;
   height: 16px;
   margin-left: -15px;
 }
+
 .tree-leaves.middle {
   width: 50px;
   height: 16px;
   margin-left: -25px;
 }
+
 .tree-leaves.bottom {
   width: 76px;
   height: 16px;
@@ -931,22 +1020,27 @@ html,body {
 .tree-leaves.upper .a:nth-child(1) {
   top: -6px;
 }
+
 .tree-leaves.upper .a:nth-child(2) {
   left: -6px;
 }
+
 .tree-leaves.upper .a:nth-child(3) {
   width: 16px;
   height: 16px;
   top: -10px;
   left: 10px;
 }
+
 .tree-leaves.upper .a:nth-child(4) {
   top: -8px;
   left: 24px;
 }
+
 .tree-leaves.upper .a:nth-child(5) {
   left: 28px;
 }
+
 .tree-leaves.upper .a:nth-child(6) {
   left: 28px;
   top: 10px;
@@ -955,23 +1049,28 @@ html,body {
 .tree-leaves.middle .a:nth-child(1) {
   top: -6px;
 }
+
 .tree-leaves.middle .a:nth-child(2) {
   left: -6px;
 }
+
 .tree-leaves.middle .a:nth-child(3) {
   left: -6px;
   top: 8px;
 }
+
 .tree-leaves.middle .a:nth-child(4) {
   left: 44px;
   top: 4px;
 }
+
 .tree-leaves.middle .a:nth-child(5) {
   left: 50px;
   top: 12px;
   width: 12px;
   height: 12px;
 }
+
 .tree-leaves.middle .a:nth-child(6) {
   left: 58px;
   top: 18px;
@@ -981,43 +1080,51 @@ html,body {
   left: -2px;
   top: -2px;
 }
+
 .tree-leaves.bottom .a:nth-child(2) {
   left: -4px;
   top: 6px;
 }
+
 .tree-leaves.bottom .a:nth-child(3) {
   left: 4px;
   top: 11px;
   width: 14px;
 }
+
 .tree-leaves.bottom .a:nth-child(4) {
   left: 16px;
   top: 11px;
   height: 14px;
   width: 14px;
 }
+
 .tree-leaves.bottom .a:nth-child(5) {
   left: 28px;
   top: 12px;
 }
+
 .tree-leaves.bottom .a:nth-child(6) {
   left: 50px;
   top: 6px;
   height: 14px;
   width: 14px;
 }
+
 .tree-leaves.bottom .a:nth-child(7) {
   left: 60px;
   top: 8px;
   height: 12px;
   width: 12px;
 }
+
 .tree-leaves.bottom .a:nth-child(8) {
   left: 70px;
   top: 8px;
   height: 12px;
   width: 12px;
 }
+
 .tree-leaves.bottom .a:nth-child(9) {
   left: -4px;
   top: 12px;
@@ -1027,9 +1134,11 @@ html,body {
   0% {
     transform: rotate(-1deg);
   }
+
   50% {
     transform: rotate(3deg);
   }
+
   100% {
     transform: rotate(-1deg);
   }
@@ -1039,13 +1148,16 @@ html,body {
   0% {
     transform: rotate(-1deg);
   }
+
   50% {
     transform: rotate(3deg);
   }
+
   100% {
     transform: rotate(-1deg);
   }
 }
+
 .star-fall {
   position: relative;
   border-radius: 2px;
@@ -1054,6 +1166,7 @@ html,body {
   overflow: hidden;
   transform: rotate(-20deg);
 }
+
 .star-fall:after {
   content: "";
   position: absolute;
@@ -1062,49 +1175,54 @@ html,body {
   background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
   left: 100%;
   -webkit-animation: star-fall 3.6s linear infinite;
-          animation: star-fall 3.6s linear infinite;
+  animation: star-fall 3.6s linear infinite;
 }
 
 .star-fall:nth-child(1) {
   left: 80px;
   top: 400px;
 }
+
 .star-fall:nth-child(1):after {
   -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
+  animation-delay: 2.4s;
 }
 
 .star-fall:nth-child(2) {
   left: 200px;
   top: 200px;
 }
+
 .star-fall:nth-child(2):after {
   -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
 
 .star-fall:nth-child(3) {
   left: 780px;
   top: 400px;
 }
+
 .star-fall:nth-child(3):after {
   -webkit-animation-delay: 3.2s;
-          animation-delay: 3.2s;
+  animation-delay: 3.2s;
 }
 
 .star-fall:nth-child(4) {
   left: 200px;
   top: 100px;
 }
+
 .star-fall:nth-child(4):after {
   -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 @-webkit-keyframes star-fall {
   20% {
     left: -100%;
   }
+
   100% {
     left: -100%;
   }
@@ -1114,20 +1232,24 @@ html,body {
   20% {
     left: -100%;
   }
+
   100% {
     left: -100%;
   }
 }
+
 @media screen and (max-width: 970px) {
   .container {
     transform: scale(0.7);
   }
 }
+
 @media screen and (max-width: 770px) {
   .container {
     transform: scale(0.5);
   }
 }
+
 @media screen and (max-width: 520px) {
   .container {
     transform: scale(0.3);
@@ -1144,19 +1266,23 @@ html,body {
     opacity: 0;
     padding-left: 5px;
   }
+
   25% {
     font-size: 8px;
     opacity: 1;
     padding-left: 10px;
   }
+
   50% {
     padding-left: 0px;
   }
+
   75% {
     font-size: 18px;
     opacity: 1;
     padding-left: 10px;
   }
+
   100% {
     font-size: 28px;
     opacity: 0;
@@ -1164,25 +1290,30 @@ html,body {
     padding-left: 5px;
   }
 }
+
 @-moz-keyframes love1 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 5px;
   }
+
   25% {
     font-size: 8px;
     opacity: 1;
     padding-left: 10px;
   }
+
   50% {
     padding-left: 0px;
   }
+
   75% {
     font-size: 18px;
     opacity: 1;
     padding-left: 10px;
   }
+
   100% {
     font-size: 28px;
     opacity: 0;
@@ -1190,25 +1321,30 @@ html,body {
     padding-left: 5px;
   }
 }
+
 @-webkit-keyframes love1 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 5px;
   }
+
   25% {
     font-size: 8px;
     opacity: 1;
     padding-left: 10px;
   }
+
   50% {
     padding-left: 0px;
   }
+
   75% {
     font-size: 18px;
     opacity: 1;
     padding-left: 10px;
   }
+
   100% {
     font-size: 28px;
     opacity: 0;
@@ -1216,25 +1352,30 @@ html,body {
     padding-left: 5px;
   }
 }
+
 @-o-keyframes love1 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 5px;
   }
+
   25% {
     font-size: 8px;
     opacity: 1;
     padding-left: 10px;
   }
+
   50% {
     padding-left: 0px;
   }
+
   75% {
     font-size: 18px;
     opacity: 1;
     padding-left: 10px;
   }
+
   100% {
     font-size: 28px;
     opacity: 0;
@@ -1242,25 +1383,30 @@ html,body {
     padding-left: 5px;
   }
 }
+
 @-ms-keyframes love1 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 5px;
   }
+
   25% {
     font-size: 8px;
     opacity: 1;
     padding-left: 10px;
   }
+
   50% {
     padding-left: 0px;
   }
+
   75% {
     font-size: 18px;
     opacity: 1;
     padding-left: 10px;
   }
+
   100% {
     font-size: 28px;
     opacity: 0;
@@ -1268,25 +1414,30 @@ html,body {
     padding-left: 5px;
   }
 }
+
 @keyframes love2 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 4.16666667px;
   }
+
   25% {
     font-size: 9.6px;
     opacity: 1;
     padding-left: 0px;
   }
+
   50% {
     padding-left: 8.33333333px;
   }
+
   75% {
     font-size: 21.6px;
     opacity: 1;
     padding-left: 0px;
   }
+
   100% {
     font-size: 33.6px;
     opacity: 0;
@@ -1294,25 +1445,30 @@ html,body {
     padding-left: 4.16666667px;
   }
 }
+
 @-moz-keyframes love2 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 4.16666667px;
   }
+
   25% {
     font-size: 9.6px;
     opacity: 1;
     padding-left: 0px;
   }
+
   50% {
     padding-left: 8.33333333px;
   }
+
   75% {
     font-size: 21.6px;
     opacity: 1;
     padding-left: 0px;
   }
+
   100% {
     font-size: 33.6px;
     opacity: 0;
@@ -1320,25 +1476,30 @@ html,body {
     padding-left: 4.16666667px;
   }
 }
+
 @-webkit-keyframes love2 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 4.16666667px;
   }
+
   25% {
     font-size: 9.6px;
     opacity: 1;
     padding-left: 0px;
   }
+
   50% {
     padding-left: 8.33333333px;
   }
+
   75% {
     font-size: 21.6px;
     opacity: 1;
     padding-left: 0px;
   }
+
   100% {
     font-size: 33.6px;
     opacity: 0;
@@ -1346,25 +1507,30 @@ html,body {
     padding-left: 4.16666667px;
   }
 }
+
 @-o-keyframes love2 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 4.16666667px;
   }
+
   25% {
     font-size: 9.6px;
     opacity: 1;
     padding-left: 0px;
   }
+
   50% {
     padding-left: 8.33333333px;
   }
+
   75% {
     font-size: 21.6px;
     opacity: 1;
     padding-left: 0px;
   }
+
   100% {
     font-size: 33.6px;
     opacity: 0;
@@ -1372,25 +1538,30 @@ html,body {
     padding-left: 4.16666667px;
   }
 }
+
 @-ms-keyframes love2 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 4.16666667px;
   }
+
   25% {
     font-size: 9.6px;
     opacity: 1;
     padding-left: 0px;
   }
+
   50% {
     padding-left: 8.33333333px;
   }
+
   75% {
     font-size: 21.6px;
     opacity: 1;
     padding-left: 0px;
   }
+
   100% {
     font-size: 33.6px;
     opacity: 0;
@@ -1398,25 +1569,30 @@ html,body {
     padding-left: 4.16666667px;
   }
 }
+
 @keyframes love3 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 2.5px;
   }
+
   25% {
     font-size: 16px;
     opacity: 1;
     padding-left: 5px;
   }
+
   50% {
     padding-left: 0px;
   }
+
   75% {
     font-size: 36px;
     opacity: 1;
     padding-left: 5px;
   }
+
   100% {
     font-size: 56px;
     opacity: 0;
@@ -1424,25 +1600,30 @@ html,body {
     padding-left: 2.5px;
   }
 }
+
 @-moz-keyframes love3 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 2.5px;
   }
+
   25% {
     font-size: 16px;
     opacity: 1;
     padding-left: 5px;
   }
+
   50% {
     padding-left: 0px;
   }
+
   75% {
     font-size: 36px;
     opacity: 1;
     padding-left: 5px;
   }
+
   100% {
     font-size: 56px;
     opacity: 0;
@@ -1450,25 +1631,30 @@ html,body {
     padding-left: 2.5px;
   }
 }
+
 @-webkit-keyframes love3 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 2.5px;
   }
+
   25% {
     font-size: 16px;
     opacity: 1;
     padding-left: 5px;
   }
+
   50% {
     padding-left: 0px;
   }
+
   75% {
     font-size: 36px;
     opacity: 1;
     padding-left: 5px;
   }
+
   100% {
     font-size: 56px;
     opacity: 0;
@@ -1476,25 +1662,30 @@ html,body {
     padding-left: 2.5px;
   }
 }
+
 @-o-keyframes love3 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 2.5px;
   }
+
   25% {
     font-size: 16px;
     opacity: 1;
     padding-left: 5px;
   }
+
   50% {
     padding-left: 0px;
   }
+
   75% {
     font-size: 36px;
     opacity: 1;
     padding-left: 5px;
   }
+
   100% {
     font-size: 56px;
     opacity: 0;
@@ -1502,25 +1693,30 @@ html,body {
     padding-left: 2.5px;
   }
 }
+
 @-ms-keyframes love3 {
   0% {
     font-size: 0;
     opacity: 0;
     padding-left: 2.5px;
   }
+
   25% {
     font-size: 16px;
     opacity: 1;
     padding-left: 5px;
   }
+
   50% {
     padding-left: 0px;
   }
+
   75% {
     font-size: 36px;
     opacity: 1;
     padding-left: 5px;
   }
+
   100% {
     font-size: 56px;
     opacity: 0;
@@ -1528,13 +1724,14 @@ html,body {
     padding-left: 2.5px;
   }
 }
+
 #hearts {
   display: block;
   position: relative;
   left: 0;
   right: 0;
   bottom: 0;
-  top:60%;
+  top: 60%;
   margin: auto;
   width: 300px;
   height: 200px;
@@ -1570,6 +1767,7 @@ html,body {
   -ms-animation: love1 0.7s infinite ease-in-out;
   animation: love1 0.7s infinite ease-in-out;
 }
+
 .heart2 {
   display: block;
   position: absolute;
@@ -1599,6 +1797,7 @@ html,body {
   -ms-animation: love3 0.7s infinite ease-in-out 0.3s;
   animation: love3 0.7s infinite ease-in-out 0.3s;
 }
+
 .heart3 {
   display: block;
   position: absolute;
@@ -1618,6 +1817,7 @@ html,body {
   -ms-animation: love2 0.6s infinite ease-in-out 0.6s;
   animation: love2 0.6s infinite ease-in-out 0.6s;
 }
+
 .heart4 {
   display: block;
   position: absolute;
@@ -1647,6 +1847,7 @@ html,body {
   -ms-animation: love1 0.7s infinite ease-in-out;
   animation: love1 0.7s infinite ease-in-out;
 }
+
 .heart5 {
   display: block;
   position: absolute;
@@ -1676,6 +1877,7 @@ html,body {
   -ms-animation: love2 0.6s infinite ease-in-out 0.3s;
   animation: love2 0.6s infinite ease-in-out 0.3s;
 }
+
 .heart6 {
   display: block;
   position: absolute;
@@ -1695,6 +1897,7 @@ html,body {
   -ms-animation: love3 0.7s infinite ease-in-out 0.6s;
   animation: love3 0.7s infinite ease-in-out 0.6s;
 }
+
 .heart7 {
   display: block;
   position: absolute;
@@ -1724,6 +1927,7 @@ html,body {
   -ms-animation: love2 0.7s infinite ease-in-out 0.3s;
   animation: love2 0.7s infinite ease-in-out 0.3s;
 }
+
 .heart8 {
   display: block;
   position: absolute;
@@ -1753,3 +1957,44 @@ html,body {
   animation: love1 0.7s infinite ease-in-out;
 }
 
+/* 評價回饋 */
+.evaluation {
+  display: flex;
+  height: 300px;
+  background-color: rgb(250, 219, 182);
+  /* background-color:#DEECE8 ; */
+  /* float: right; */
+  position: relative;
+  left: 50%;
+  top: 50%;
+  /* justify-content: center; */
+  align-items: center;
+  transform: translate(-50%, 0%);
+}
+
+.evaluation-wrapper .swiper-slide {
+  display: flex;
+  position: relative;
+  left: 35%;
+  top: 50%;
+  align-items: center;
+  /* transform: translate(-50%, -50%);  */
+}
+
+.prev {
+  margin-left: 40px;
+}
+
+.news {
+  background-image: url('../img/index_img_04.jpg');
+  height: 90vh;
+  background-size: cover;
+  /* opacity: 0.5; */
+}
+
+.news-contain {
+  position: relative;
+  top: 50px;
+  left: 20px;
+  width: 95%;
+}

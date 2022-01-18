@@ -212,6 +212,16 @@ body{
   transition-duration: 0.5s;
 }
 
+.room-type a{
+  text-decoration: none;
+  color: #C3A26C;
+}
+
+.room-type a:hover{
+  text-decoration: none;
+  color: #fff;;
+}
+
 .main-title, .main hr{
   color: #C3A26C;
 }

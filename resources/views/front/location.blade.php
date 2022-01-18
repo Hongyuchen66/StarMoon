@@ -52,6 +52,12 @@
     </div>
 
 </section>
+<footer class="footer">
+    <div class="align">
+        <span class="addr">台中市后里區月眉北路486號(大摩天輪正後方)</span>
+        <span class="tel">電話：04-26831671 / 傳真：04-26834003</span>
+    </div>
+</footer>
 
 @endsection
 
