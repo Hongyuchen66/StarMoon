@@ -6,6 +6,34 @@
     .note-btn.dropdown-toggle:after {
         content:none;
     }
+    .img{
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        border: 1px solid #000;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    .delete-btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%,-50%);
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: red;
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
 </style>
 @endsection
 
