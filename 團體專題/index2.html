@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="./css/index2.css">
   <!-- Swiper css -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- 聯絡我們css -->
+  <link rel="stylesheet" href="./css/contact.css">
 </head>
 
 <body>
@@ -50,6 +52,9 @@
         </a></li>
       <li><a href="#">
           <h3>線上訂房</h3>
+        </a></li>
+      <li><a class=" btn popup-btn" href="#letmeopen">
+          <h3>聯絡我們</h3>
         </a></li>
     </ul>
   </div>
@@ -298,7 +303,7 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
-      </div>      
+      </div>
     </section>
 
     <!-- 評價專區 -->
@@ -344,8 +349,88 @@
       </div>
     </section>
 
+    <!-- 跳出視窗內容 -->
+
+    <div class="popup-wrap" id="letmeopen">
+      <div class="popup-box transform-out">
+        <!-- style="background-image: url(/img/contactus-bgi.png);" -->
+        <div class="img">
+          <!-- <img src="/img/contactus-bgi.png" alt=""> -->
+          <div class="contact-title">Contact Us</div>
+        </div>
+        <form action="{{asset('/contact')}}" method="POST">
+          <!-- @csrf -->
+          <div class="contactus">
+            <table>
+              <tr>
+                <td><label for="name" class="form-label">Name</label></td>
+                <td><input type="text" class="form-control mb-3  @error('name') is-invalid @enderror" id="name"
+                    name="name" value="{{old('name')}}">
+                  <!-- @error('name')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+                @enderror -->
+                </td>
+              </tr>
+              <tr>
+                <td><label for="phone" class="form-label">Phone</label></td>
+                <td><input type="text" class="form-control mb-3  @error('phone') is-invalid @enderror" id="phone"
+                    name="phone" value="{{old('phone')}}">
+                  <!-- @error('phone')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+                @enderror-->
+                </td>
+              </tr>
+              <tr>
+                <td><label for="email" class="form-label">Email</label></td>
+                <td><input type="text" class="form-control mb-3  @error('email') is-invalid @enderror" id="email"
+                    name="email" value="{{old('email')}}">
+                  <!-- @error('email')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+                @enderror -->
+                </td>
+              </tr>
+              <tr>
+                <td><label for="content" class="form-label">Massage</label></td>
+                <td>
+                  <input type="text" class="form-control mb-3  @error('content') is-invalid @enderror" id="content"
+                    name="content" value="{{old('content')}}">
+
+                  <!-- <textarea type="text" class="form-control mb-3 message_textarea @error('content') is-invalid @enderror"
+                  id="content" name="content" cols="30" rows="10">{{old('content')}}</textarea> -->
+
+                  <!-- 先註解 避免影響HTML排版 -->
+                  <!-- @error('content')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+                @error('g-recaptcha-response')
+                <strong class="text-danger">{{ $message }}</strong>
+                @enderror-->
+                </td>
+              </tr>
+            </table>
+          </div>
+
+
+          <!-- {!! htmlFormSnippet() !!}  -->
+          <button type="submit" class="btn-contact">Submit</button>
+
+        </form>
+        <a class="close-btn popup-close" href="#">x</a>
+      </div>
+    </div>
+
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/jquerypp.custom.js"></script>
@@ -513,6 +598,25 @@
       }
     });
 
+  </script>
+
+  <script>
+    // 聯絡我們彈出視窗的js code
+    $(".popup-btn").click(function () {
+      var href = $(this).attr("href")
+      $(href).fadeIn(250);
+      $(href).children$("popup-box").removeClass("transform-out").addClass("transform-in");
+      e.preventDefault();
+    });
+
+    $(".popup-close").click(function () {
+      closeWindow();
+    });
+    function closeWindow() {
+      $(".popup-wrap").fadeOut(200);
+      $(".popup-box").removeClass("transform-in").addClass("transform-out");
+      event.preventDefault();
+    }
   </script>
 
 </body>

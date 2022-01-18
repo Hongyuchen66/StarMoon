@@ -13,8 +13,11 @@ body{
     width: 140px;
     height: 100vh;
     padding:30px 10px;
-    box-shadow:4px 4px 10px #cccccc;/*陰影*/
-    position: fixed;/*定位用*/
+    /*陰影 */
+    box-shadow:4px 4px 10px #cccccc; 
+    /*定位用*/
+    position: fixed;
+    
     z-index:1;    
 }
 
@@ -1782,9 +1785,9 @@ html,body {
 
 .news{
   background-image: url('../img/index_img_04.jpg');
-  height: 70vh;
+  height: 95vh;
   background-size:cover;
-  /* opacity: 0.5; */
+
 }
 
 .news-contain {
@@ -1792,4 +1795,69 @@ html,body {
   top: 50px;
   left: 20px;
   width: 95%;
+}
+
+/* 聯絡我們 */
+.contactus{
+  margin-top:50px;
+  margin-left: 100px;
+
+}
+
+.contactus td{
+  vertical-align:top;
+  text-align:right;
+  
+}
+
+.img{
+  background-image: url('/img/contactus-bgi.png');
+  background-size:cover;
+  height: 450px;
+}
+
+.btn-contact{
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 780px) {
+  .navbar{
+    /* display: flex; */
+    /* flex-direction: row; */
+    width: 100vh;
+    height: 140px;
+    z-index:200;   
+    /* padding:30px 10px;
+    box-shadow:4px 4px 10px #cccccc;
+    position: fixed;*/     
+  } 
+
+  .navbar:hover{
+    width: 100vw; 
+    /* height: 140px; */
+    transition-duration:0s ;
+    transition-timing-function: none;
+  }
+
+
+  .logo{
+    /* width: 80px; */
+    /* height: 80px; */
+    margin:0px ;
+  }
+
+ ul{
+    padding: 0px;
+    margin-top: 0px;/*和LOGO距離*/
+  }
+
+  li{
+    opacity:1;
+    text-align:center;/*置中*/
+    margin-bottom: 30px;/*間距拉大*/
+    transition: .5s;/*動畫延遲*/
+    list-style-type: none;/*把點點去掉*/
+  } 
+ 
+
 }
