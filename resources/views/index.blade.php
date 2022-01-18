@@ -292,7 +292,7 @@
             <!-- 星月文旅 https://www.facebook.com/smbnb-->
             <div class="swiper news-contain">
                 <div class="swiper-wrapper">
-                    @foreach ($news as $item)                        
+                    @foreach ($news as $item)
                     <div class="swiper-slide">{!!$item->image_url!!}
                     </div>
                     @endforeach
@@ -327,7 +327,7 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper evaluation-wrapper">
                     <!-- Slides -->
-                    @foreach ($feedbacks as $feedback)                        
+                    @foreach ($feedbacks as $feedback)
                     <div class="swiper-slide">
                         <span name="" id="" cols="100" rows="13">
                             {!!$feedback->content!!}
@@ -369,50 +369,75 @@
 
         <div class="popup-wrap" id="letmeopen">
             <div class="popup-box transform-out">
+                <!-- style="background-image: url(/img/contactus-bgi.png);" -->
                 <div class="img">
-                    <img src="{{asset('/img/contactus-bgi.png')}}" alt="">
+                    {{-- <img src="{{asset('/img/contactus-bgi.png')}}" alt=""> --}}
                     <div class="contact-title">Contact Us</div>
                 </div>
                 <form action="{{asset('/contact')}}" method="POST">
                     @csrf
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control mb-3  @error('name') is-invalid @enderror" id="name"
-                        name="name" value="{{old('name')}}">
-                    @error('name')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    <label for="phone" class="form-label">Phone</label>
-                    <input type="text" class="form-control mb-3  @error('phone') is-invalid @enderror" id="phone"
-                        name="phone" value="{{old('phone')}}">
-                    @error('phone')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    <label for="email" class="form-label">Email</label>
-                    <input type="text" class="form-control mb-3  @error('email') is-invalid @enderror" id="email"
-                        name="email" value="{{old('email')}}">
-                    @error('email')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    <label for="content" class="form-label">Massage</label>
-                    <textarea type="text"
-                        class="form-control mb-3 message_textarea @error('content') is-invalid @enderror" id="content"
-                        name="content">{{old('content')}}</textarea>
-                    @error('content')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                    @error('g-recaptcha-response')
-                    <strong class="text-danger">{{ $message }}</strong>
-                    @enderror
+                    <div class="contactus">
+                        <table>
+                            <tr>
+                                <td><label for="name" class="form-label">Name</label></td>
+                                <td><input type="text" class="form-control mb-3  @error('name') is-invalid @enderror"
+                                        id="name" name="name" value="{{old('name')}}">
+                                    @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="phone" class="form-label">Phone</label></td>
+                                <td><input type="text" class="form-control mb-3  @error('phone') is-invalid @enderror"
+                                        id="phone" name="phone" value="{{old('phone')}}">
+                                    @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="email" class="form-label">Email</label></td>
+                                <td><input type="text" class="form-control mb-3  @error('email') is-invalid @enderror"
+                                        id="email" name="email" value="{{old('email')}}">
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="content" class="form-label">Massage</label></td>
+                                <td>
+                                    <input type="text" class="form-control mb-3  @error('content') is-invalid @enderror"
+                                        id="content" name="content" value="{{old('content')}}">
+
+                                    <!-- <textarea type="text" class="form-control mb-3 message_textarea @error('content') is-invalid @enderror"
+                    id="content" name="content" cols="30" rows="10">{{old('content')}}</textarea> -->
+
+                                    <!-- 先註解 避免影響HTML排版 -->
+                                    @error('content')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                    @error('g-recaptcha-response')
+                                    <strong class="text-danger">{{ $message }}</strong>
+                                    @enderror
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
                     {!! htmlFormSnippet() !!}
                     <button type="submit" class="btn-contact">Submit</button>
+
                 </form>
                 <a class="close-btn popup-close" href="#">x</a>
             </div>
@@ -547,7 +572,7 @@
         Page.init();
     </script>
     <script>
-    // 最新消息
+        // 最新消息
     var swiper2 = new Swiper(".news-contain", {
         slidesPerView: 3,
         spaceBetween: 30,
