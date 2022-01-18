@@ -26,7 +26,7 @@ th,td{
                         <thead>
                             <tr>
                                 <th>標題</th>
-                                <th>副標題</th>                                
+                                {{-- <th>副標題</th>                                 --}}
                                 <th width="250">主要圖片</th>
                                 <th width="120">操作</th>
                             </tr>
@@ -35,7 +35,7 @@ th,td{
                             @foreach ($features as $feature)
                                 <tr>
                                     <td>{{$feature->title}}</td>
-                                    <td>{{$feature->subtitle}}</td>
+                                    {{-- <td>{{$feature->subtitle}}</td> --}}
                                     <td><img src="{{Storage::url($feature->image_url)}}" alt="" width="200"></td>
                                     <td>
                                         <a href="{{route('features.edit',['feature'=>$feature->id])}}" class="btn btn-primary">編輯</a>                                    

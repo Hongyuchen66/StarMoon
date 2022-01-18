@@ -34,6 +34,8 @@ Route::post('/contact', [FrontController::class, 'contact'])->name('contact');
 Route::get('/location', [FrontController::class, 'location'])->name('location');
 // 房型介紹
 Route::get('/rooms', [FrontController::class, 'roomList'])->name('rooms.list');
+// 園區介紹
+Route::get('/features', [FrontController::class, 'featureList'])->name('features.list');
 
 
 

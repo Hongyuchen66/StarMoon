@@ -11,7 +11,7 @@ class Room extends Model
 {
     use HasFactory;
     protected $table = 'rooms';
-    protected $fillable = ['name','description','price','image_url','subtitle','room_facility','home_type_id'];
+    protected $fillable = ['id','name','description','price','image_url','subtitle','room_facility','home_type_id'];
 
     public function roomType()
     {

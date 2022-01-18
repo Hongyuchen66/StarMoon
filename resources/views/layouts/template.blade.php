@@ -29,12 +29,7 @@
 <body>
   @yield('main')
 
-  <footer class="footer">
-    <div class="align">
-      <span class="addr">台中市后里區月眉北路486號(大摩天輪正後方)</span>
-      <span class="tel">電話：04-26831671 / 傳真：04-26834003</span>
-    </div>
-  </footer>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">

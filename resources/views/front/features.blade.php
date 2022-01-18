@@ -1,12 +1,11 @@
 @extends('layouts.template')
-@section('title','星月文旅-房型介紹')
+@section('title','星月文旅-園區特色')
 
 @section('css')
 <!-- CSS -->
 <link rel="stylesheet" href="{{asset('css/features.css')}}">
 <!-- Swiper css -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-@endsection
 
 @section('main')
 <div class="page-wrapper">
@@ -14,19 +13,18 @@
     <div class="head">
         <div class="main">
             <div class="main-title">
-                <h5>HOME / ROOM</h5>
+                <h5>Features</h5>
             </div>
             <hr>
             <div class="room-type">
-                {{-- <span>精品雙人房</span>
-                <span>簡約雙人房</span>
-                <span>家庭四人房</span>
-                <span>溫泉湯屋休息</span> --}}
-                <span hidden><a href="{{route('rooms.list','type_id=3')}}" class="tab">精品雙人房</a></span>
+                {{-- <span>景觀婚宴館</span>
+                <span>親子遊戲區</span>
+                <span>戶外溫泉區</span> --}}
+                <span hidden><a href="{{route('features.list','type_id=1')}}" class="tab">精品雙人房</a></span>
 
-                @foreach ($roomTypes as $roomType)
-                <span><a href="{{route('rooms.list','type_id='.$roomType->id)}}"
-                        class="tab">{{$roomType->name}}</a></span>
+                @foreach ($featureTypes as $featureType)
+                <span><a href="{{route('features.list','type_id='.$featureType->id)}}"
+                        class="tab">{{$featureType->title}}</a></span>
 
                 @endforeach
             </div>
@@ -37,12 +35,15 @@
         <div class="pic">
             <div class="swiper mySwiper2">
                 <div class="swiper-wrapper">
-                    @foreach ($roomImages as $room)
+                    @foreach ($featureImages as $feature)
                     <div class="swiper-slide">
-                        <img src="{{Storage::url($room->image_url)}}" />
+                        <img src="{{Storage::url($feature->image_url)}}" />
                     </div>
                     @endforeach
                     {{-- <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
                         <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
                     </div>
                     <div class="swiper-slide">
@@ -54,7 +55,6 @@
                     <div class="swiper-slide">
                         <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
                     </div> --}}
-
                 </div>
 
             </div>
@@ -62,9 +62,9 @@
             <div class="down-Swiper">
                 <div thumbsSlider="" class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        @foreach ($roomImages as $room)
+                        @foreach ($featureImages as $feature)
                         <div class="swiper-slide">
-                            <img src="{{Storage::url($room->image_url)}}" />
+                            <img src="{{Storage::url($feature->image_url)}}" />
                         </div>
                         @endforeach
                         {{-- <div class="swiper-slide">
@@ -93,24 +93,26 @@
                     <!-- <span class="next">next</span> -->
                 </p>
             </div>
+
         </div>
 
         <div class="right">
-            @foreach ($rooms as $room)
             <div class="contain-text">
-                <h2 class="title">{{$room->subtitle}}</h2>
-                <h2 class="title">ROOM</h2>
+                <span class="title">LANDSCAPE BANQUET</span>
+                <span class="title">HALL</span>
 
-
+                @foreach ($features as $feature)
                 <span class="subtitle">
-                    <span class="area">{{$room->name}}</span>
-                    <span class="opentime">免費WIFI</span>
+                    <span class="area">{{$feature->title}}</span>
+                    <span class="opentime">開放時間 11:00 - 21:00</span>
                     <span class="onlineorder">線上預約</span>
                 </span>
-                <span class="memo" name="room_facility" id="room_facility" cols="50"
-                    rows="8">{!!$room->room_facility!!}</span>
+
+                <span class="memo" disabled name="" id="" cols="50" rows="16">
+                    {!!$feature->description!!}
+                </span>
+                @endforeach
             </div>
-            @endforeach
         </div>
     </section>
     <footer class="footer">
