@@ -71,7 +71,7 @@ class FrontController extends Controller
         if($request->type_id){
             $features = Feature::where('subtitle',$request->type_id)->get();
         }else{
-            $features = Feature::where('subtitle',1)->get();
+            $features = Feature::where('subtitle',2)->get();
         }
         foreach ($features as $item) {
             $images = $item;
