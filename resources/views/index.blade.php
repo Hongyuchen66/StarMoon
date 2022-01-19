@@ -32,6 +32,13 @@
 </head>
 
 <body>
+    @if (session('message'))
+    <div class="container">
+        <div class="alert {{session('color')}}" role="alert">
+            {{session('message')}}
+        </div>
+    </div>
+    @endif
     <!-- nav -->
     <div class="navbar">
         <div class="logo"></div>
@@ -54,7 +61,8 @@
             <li><a href="{{route('location')}}" target="_blank">
                     <h3>交通資訊</h3>
                 </a></li>
-            <li><a class="nav-link" href="https://booking.owlting.com/smbnb?lang=zh_TW&start=2022-01-09&end=2022-01-10&adult=1&child=0&infant=0"
+            <li><a class="nav-link"
+                    href="https://booking.owlting.com/smbnb?lang=zh_TW&start=2022-01-09&end=2022-01-10&adult=1&child=0&infant=0"
                     target="_blank">
                     <h3>線上訂房</h3>
                 </a></li>
