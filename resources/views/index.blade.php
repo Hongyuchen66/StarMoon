@@ -54,7 +54,7 @@
             <li><a href="{{route('location')}}" target="_blank">
                     <h3>交通資訊</h3>
                 </a></li>
-            <li><a href="https://booking.owlting.com/smbnb?lang=zh_TW&start=2022-01-09&end=2022-01-10&adult=1&child=0&infant=0"
+            <li><a class="nav-link" href="https://booking.owlting.com/smbnb?lang=zh_TW&start=2022-01-09&end=2022-01-10&adult=1&child=0&infant=0"
                     target="_blank">
                     <h3>線上訂房</h3>
                 </a></li>
@@ -68,7 +68,7 @@
     <div class=" content">
 
         <!-- 第一頁~理念 -->
-        <section class="introduce">
+        <section class="introduce" id="introduce">
 
             <div class="introduce-top-photo photo">
                 <div class="sky">
