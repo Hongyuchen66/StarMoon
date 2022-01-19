@@ -20,7 +20,7 @@
                 {{-- <span>景觀婚宴館</span>
                 <span>親子遊戲區</span>
                 <span>戶外溫泉區</span> --}}
-                <span hidden><a href="{{route('features.list','type_id=1')}}" class="tab">精品雙人房</a></span>
+                <span hidden><a href="{{route('features.list','type_id=2')}}" class="tab">景觀婚宴館</a></span>
 
                 @foreach ($featureTypes as $featureType)
                 <span><a href="{{route('features.list','type_id='.$featureType->id)}}"
