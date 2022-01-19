@@ -19,12 +19,11 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/bookblock.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('css/demo1.css')}}" />
     <script src="{{asset('js/modernizr.custom.js')}}"></script>
-
-    <!-- Swiper css -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
+    
     <!-- CSS -->
     <link rel="stylesheet" href="{{asset('./css/index2.css')}}">
+    <!-- Swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     {{-- 聯絡我們css --}}
     <link rel="stylesheet" href="{{asset('./css/contact.css')}}">
