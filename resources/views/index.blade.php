@@ -229,13 +229,13 @@
                     <h3>簡約雙人房</h3>
                     <h4>靜謐空間沉澱心靈　單純慢活回歸本心</h4>
                     <br>
-                    <h4>更多介紹</h4>
+                    <h4><a href="{{route('rooms.list')}}" target="_blank">更多介紹</a></h4>
                 </div>
                 <div class="room02 room">
                     <h3>精品雙人房</h3>
                     <h4>製造浪漫瞬間　享受彼此愛戀</h4>
                     <br>
-                    <h4>更多介紹</h4>
+                    <h4><a href="{{route('rooms.list')}}" target="_blank">更多介紹</a></h4>
                 </div>
                 <div class="wrapper-photo"><img src="{{asset('img/room02_1.jpg')}}" width="100%" height="100%" alt="">
                 </div>
@@ -249,7 +249,7 @@
                     <h3>家庭四人房</h3>
                     <h4>溫馨大空間　感受家人間的美好時光</h4>
                     <br>
-                    <h4>更多介紹</h4>
+                    <h4><a href="{{route('rooms.list')}}" target="_blank">更多介紹</a></h4>
                 </div>
             </div>
 
@@ -269,21 +269,21 @@
 
             <div class="feature-info">
                 <h4>靜謐戶外溫泉區</h4>
-                <h4>更多介紹</h4>
+                <h4><a href="{{route('features.list')}}" target="_blank">更多介紹</a></h4>
             </div>
 
             <div class="feature-photo02 photo"></div>
 
             <div class="feature-info">
                 <h4>家庭親子互動活動區</h4>
-                <h4>更多介紹</h4>
+                <h4><a href="{{route('features.list')}}" target="_blank">更多介紹</a></h4>
             </div>
 
             <div class="feature-photo03 photo"></div>
 
             <div class="feature-info">
                 <h4>精緻餐飲－星月大地</h4>
-                <h4>更多介紹</h4>
+                <h4><a href="{{route('features.list')}}" target="_blank">更多介紹</a></h4>
             </div>
 
             <div class="feature-photo04 photo"></div>
