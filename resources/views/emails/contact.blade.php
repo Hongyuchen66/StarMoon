@@ -124,6 +124,25 @@
                     </tr>
                   </tbody>
                 </table>
+
+                <table>
+                    <tr>
+                        <td>姓名</td>
+                        <td>{{$contact->name}}</td>
+                    </tr>
+                    <tr>
+                        <td>電話</td>
+                        <td>{{$contact->phone}}</td>
+                    </tr>
+                    <tr>
+                        <td>信箱</td>
+                        <td>{{$contact->email}}</td>
+                    </tr>
+                    <tr>
+                        <td>內容</td>
+                        <td>{{$contact->content}}</td>
+                    </tr>
+                </table>
               </div>
               <!--[if mso | IE]></td></tr></table><![endif]-->
             </td>
