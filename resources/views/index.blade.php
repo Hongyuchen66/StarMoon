@@ -19,23 +19,25 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/bookblock.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('css/demo1.css')}}" />
     <script src="{{asset('js/modernizr.custom.js')}}"></script>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{asset('./css/index2.css')}}">
+
     <!-- Swiper css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-    {{-- 聯絡我們css --}}
-    <link rel="stylesheet" href="{{asset('./css/contact.css')}}">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/index2.css">
+    <!-- Swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- 聯絡我們css -->
+    <link rel="stylesheet" href="./css/contact.css">
 
 </head>
 
 <body>
     <!-- nav -->
-    <div class="navbar">
+    <div class="navbar collapse navbar-collapse">
         <div class="logo"></div>
-        <ul>
-            <li><a href="#introduce">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="#introduce">
                     <h3>TOP</h3>
                 </a></li>
             <li><a href="{{route('rooms.list')}}" target="_blank">
@@ -53,11 +55,13 @@
             <li><a href="{{route('location')}}" target="_blank">
                     <h3>交通資訊</h3>
                 </a></li>
-            <li><a class="nav-link" href="https://booking.owlting.com/smbnb?lang=zh_TW&start=2022-01-09&end=2022-01-10&adult=1&child=0&infant=0"
+            <li class="nav-item"><a class="nav-link"
+                    href="https://booking.owlting.com/smbnb?lang=zh_TW&start=2022-01-09&end=2022-01-10&adult=1&child=0&infant=0"
                     target="_blank">
                     <h3>線上訂房</h3>
-                </a></li>
-            <li><a class=" btn popup-btn" href="#letmeopen">
+                </a>
+            </li>
+            <li class="nav-item"><a class="btn popup-btn" href="#letmeopen">
                     <h3>聯絡我們</h3>
                 </a></li>
         </ul>
@@ -321,7 +325,7 @@
         </section>
 
         <!-- 評價專區 -->
-        <section class="evaluation">
+        <section class="evaluation" id="evaluation">
             <div class="swiper-evaluation">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper evaluation-wrapper">
@@ -363,6 +367,13 @@
                 <!-- <div class="swiper-scrollbar"></div> -->
             </div>
         </section>
+
+        <footer class="footer">
+            <div class="align">
+                <span class="addr">台中市后里區月眉北路486號(大摩天輪正後方)</span>
+                <span class="tel">電話：04-26831671 / 傳真：04-26834003</span>
+            </div>
+        </footer>
 
         <!-- 跳出視窗內容 -->
 
@@ -443,185 +454,155 @@
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="align">
-            <span class="addr">台中市后里區月眉北路486號(大摩天輪正後方)</span>
-            <span class="tel">電話：04-26831671 / 傳真：04-26834003</span>
-        </div>
-    </footer>
-
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="{{asset('js/jquerypp.custom.js')}}"></script>
-    <script src="{{asset('js/jquery.bookblock.js')}}"></script>
+    <script src="js/jquerypp.custom.js"></script>
+    <script src="js/jquery.bookblock.js"></script>
     <!-- swiper JS  -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
-
-
-
     <script>
-        var Page = (function() {
-            
-            var config = {
-                    $bookBlock : $( '#bb-bookblock' ),
-                    $navNext : $( '#bb-nav-next' ),
-                    $navPrev : $( '#bb-nav-prev' ),
-                    $navFirst : $( '#bb-nav-first' ),
-                    $navLast : $( '#bb-nav-last' )
-                },
-                init = function() {
-                    config.$bookBlock.bookblock( {
-                        speed : 800,
-                        shadowSides : 0.8,
-                        shadowFlip : 0.7
-                    } );
-                    initEvents();
-                },
-                initEvents = function() {
-                    
-                    var $slides = config.$bookBlock.children();
+        var Page = (function () {
 
-                    // add navigation events
-                    config.$navNext.on( 'click touchstart', function() {
-                        config.$bookBlock.bookblock( 'next' );
-                        return false;
-                    } );
+      var config = {
+        $bookBlock: $('#bb-bookblock'),
+        $navNext: $('#bb-nav-next'),
+        $navPrev: $('#bb-nav-prev'),
+        $navFirst: $('#bb-nav-first'),
+        $navLast: $('#bb-nav-last')
+      },
+        init = function () {
+          config.$bookBlock.bookblock({
+            speed: 800,
+            shadowSides: 0.8,
+            shadowFlip: 0.7
+          });
+          initEvents();
+        },
+        initEvents = function () {
 
-                    config.$navPrev.on( 'click touchstart', function() {
-                        config.$bookBlock.bookblock( 'prev' );
-                        return false;
-                    } );
+          var $slides = config.$bookBlock.children();
 
-                    config.$navFirst.on( 'click touchstart', function() {
-                        config.$bookBlock.bookblock( 'first' );
-                        return false;
-                    } );
+          // add navigation events
+          config.$navNext.on('click touchstart', function () {
+            config.$bookBlock.bookblock('next');
+            return false;
+          });
 
-                    config.$navLast.on( 'click touchstart', function() {
-                        config.$bookBlock.bookblock( 'last' );
-                        return false;
-                    } );
-                    
-                    // add swipe events
-                    $slides.on( {
-                        'swipeleft' : function( event ) {
-                            config.$bookBlock.bookblock( 'next' );
-                            return false;
-                        },
-                        'swiperight' : function( event ) {
-                            config.$bookBlock.bookblock( 'prev' );
-                            return false;
-                        }
-                    } );
+          config.$navPrev.on('click touchstart', function () {
+            config.$bookBlock.bookblock('prev');
+            return false;
+          });
 
-                    // add keyboard events
-                    $( document ).keydown( function(e) {
-                        var keyCode = e.keyCode || e.which,
-                            arrow = {
-                                left : 37,
-                                up : 38,
-                                right : 39,
-                                down : 40
-                            };
+          config.$navFirst.on('click touchstart', function () {
+            config.$bookBlock.bookblock('first');
+            return false;
+          });
 
-                        switch (keyCode) {
-                            case arrow.left:
-                                config.$bookBlock.bookblock( 'prev' );
-                                break;
-                            case arrow.right:
-                                config.$bookBlock.bookblock( 'next' );
-                                break;
-                        }
-                    } );
-                };
+          config.$navLast.on('click touchstart', function () {
+            config.$bookBlock.bookblock('last');
+            return false;
+          });
 
-                return { init : init };
+          // add swipe events
+          $slides.on({
+            'swipeleft': function (event) {
+              config.$bookBlock.bookblock('next');
+              return false;
+            },
+            'swiperight': function (event) {
+              config.$bookBlock.bookblock('prev');
+              return false;
+            }
+          });
 
-        })();
+          // add keyboard events
+          $(document).keydown(function (e) {
+            var keyCode = e.keyCode || e.which,
+              arrow = {
+                left: 37,
+                up: 38,
+                right: 39,
+                down: 40
+              };
 
-        // 聯絡我們彈出視窗的js code
-        $(".popup-btn").click(function() {
-        var href = $(this).attr("href")
-        $(href).fadeIn(250);
-        $(href).children$("popup-box").removeClass("transform-out").addClass("transform-in");
-        e.preventDefault();
-        });
+            switch (keyCode) {
+              case arrow.left:
+                config.$bookBlock.bookblock('prev');
+                break;
+              case arrow.right:
+                config.$bookBlock.bookblock('next');
+                break;
+            }
+          });
+        };
 
-        $(".popup-close").click(function() {
-        closeWindow();
-        });
-        function closeWindow(){
-        $(".popup-wrap").fadeOut(200);
-        $(".popup-box").removeClass("transform-in").addClass("transform-out");
-        event.preventDefault();
-        }
+      return { init: init };
+
+    })();
     </script>
     <script>
         Page.init();
     </script>
+
     <script>
         // 最新消息
     var swiper2 = new Swiper(".news-contain", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 3,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
         el: ".swiper-pagination",
         clickable: true,
-        },
-        navigation: {
+      },
+      navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-        },
+      },
     });
 
     //評價專區  
     const swiper = new Swiper('.swiper-evaluation', {
-        // Optional parameters => vertical/horizontal
-        // width: 700,
-        // height: 500,
-        direction: 'horizontal',
-        loop: true,
-        // If we need pagination
-        pagination: {
+      // Optional parameters => vertical/horizontal
+      // width: 700,
+      // height: 500,
+      direction: 'horizontal',
+      loop: true,
+      // If we need pagination
+      pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        },
-        // Navigation arrows
-        navigation: {
+      },
+      // Navigation arrows
+      navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-        },
-        // And if we need scrollbar
-        scrollbar: {
+      },
+      // And if we need scrollbar
+      scrollbar: {
         el: '.swiper-scrollbar',
-        },
-        watchSlidesProgress: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        loopedSlides: 5,
-        autoplay: {
+      },
+      watchSlidesProgress: true,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      loopedSlides: 5,
+      autoplay: {
         delay: 10000, //10秒切換一次
         disableOnInteraction: false, //避免手動滑動輪播圖後，自動播放失效
-        },
-        on: {
+      },
+      on: {
         progress: function (progress) {
-            for (let i = 0;i < this.slides.length;i++) {
+          for (let i = 0;i < this.slides.length;i++) {
             var slide = this.slides.eq(i);
             var slideProgress = this.slides[i].progress;
             let modify = 1;
             if (Math.abs(slideProgress) > 1) {
-                modify = (Math.abs(slideProgress) - 1) * 0.5 + 1;
+              modify = (Math.abs(slideProgress) - 1) * 0.5 + 1;
             }
             let translate = slideProgress * modify * 130 + 'px';
             let scale = 1 - Math.abs(slideProgress) / 5;
@@ -630,19 +611,38 @@
             slide.css('zIndex', zIndex);
             slide.css('opacity', 1);
             if (Math.abs(slideProgress) > 3) {
-                slide.css('opacity', 0);
+              slide.css('opacity', 0);
             }
-            }
+          }
         },
         setTransition: function (transition) {
-            for (let i = 0;i < this.slides.length;i++) {
+          for (let i = 0;i < this.slides.length;i++) {
             var slide = this.slides.eq(i)
             slide.transition(transition);
-            }
+          }
         }
-        }
+      }
     });
 
+    </script>
+
+    <script>
+        // 聯絡我們彈出視窗的js code
+    $(".popup-btn").click(function () {
+      var href = $(this).attr("href")
+      $(href).fadeIn(250);
+      $(href).children$("popup-box").removeClass("transform-out").addClass("transform-in");
+      e.preventDefault();
+    });
+
+    $(".popup-close").click(function () {
+      closeWindow();
+    });
+    function closeWindow() {
+      $(".popup-wrap").fadeOut(200);
+      $(".popup-box").removeClass("transform-in").addClass("transform-out");
+      event.preventDefault();
+    }
     </script>
 
 </body>
