@@ -40,7 +40,7 @@ class FrontController extends Controller
             'content'=>$request->content,
         ]);
         Mail::to('demostarmoon@gmail.com')->send(new ContactNotify($contact));
-        return redirect()->route('carousels.index');
+        return redirect()->route('index');
     }
 
     public function location()

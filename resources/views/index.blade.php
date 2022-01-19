@@ -54,7 +54,7 @@
             <li><a href="{{route('location')}}" target="_blank">
                     <h3>交通資訊</h3>
                 </a></li>
-            <li><a href="https://booking.owlting.com/smbnb?lang=zh_TW&start=2022-01-09&end=2022-01-10&adult=1&child=0&infant=0"
+            <li><a class="nav-link" href="https://booking.owlting.com/smbnb?lang=zh_TW&start=2022-01-09&end=2022-01-10&adult=1&child=0&infant=0"
                     target="_blank">
                     <h3>線上訂房</h3>
                 </a></li>
@@ -68,7 +68,7 @@
     <div class=" content">
 
         <!-- 第一頁~理念 -->
-        <section class="introduce">
+        <section class="introduce" id="introduce">
 
             <div class="introduce-top-photo photo">
                 <div class="sky">
@@ -442,17 +442,14 @@
                 <a class="close-btn popup-close" href="#">x</a>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
     </div>
+
+    <footer class="footer">
+        <div class="align">
+            <span class="addr">台中市后里區月眉北路486號(大摩天輪正後方)</span>
+            <span class="tel">電話：04-26831671 / 傳真：04-26834003</span>
+        </div>
+    </footer>
 
 
 
