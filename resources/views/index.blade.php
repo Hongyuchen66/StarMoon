@@ -40,19 +40,19 @@
             <li class="nav-item"><a href="#introduce">
                     <h3>TOP</h3>
                 </a></li>
-            <li><a href="{{route('rooms.list')}}" target="_blank">
+            <li class="nav-item"><a href="{{route('rooms.list')}}" target="_blank">
                     <h3>房型介紹</h3>
                 </a></li>
-            <li><a href="{{route('features.list')}}" target="_blank">
+            <li class="nav-item"><a href="{{route('features.list')}}" target="_blank">
                     <h3>園區特色</h3>
                 </a></li>
-            <li><a href="#news">
+            <li class="nav-item"><a href="#news">
                     <h3>最新消息</h3>
                 </a></li>
-            <li><a href="#evaluation">
+            <li class="nav-item"><a href="#evaluation">
                     <h3>評價</h3>
                 </a></li>
-            <li><a href="{{route('location')}}" target="_blank">
+            <li class="nav-item"><a href="{{route('location')}}" target="_blank">
                     <h3>交通資訊</h3>
                 </a></li>
             <li class="nav-item"><a class="nav-link"
@@ -291,7 +291,7 @@
         </section>
 
         <!-- 最新消息 -->
-        <section class="news">
+        <section class="news" id="news">
             <!-- 星月文旅 https://www.facebook.com/smbnb-->
             <div class="swiper news-contain">
                 <div class="swiper-wrapper">
